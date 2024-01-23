@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" db_object_id="560606c7473331109006c82f316d43a9" extends="task" label="Incidents" max_length="40" name="x_1273723_incident_incident" type="collection">
+        <element attributes="encode_utf8=false" label="Caller" max_length="32" name="caller" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Email" max_length="40" name="email" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Sub State" max_length="40" name="u_sub_state_1" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Awaiting moderation" sequence="0" value="awaiting moderation"/>
+                <element inactive_on_update="false" label="Customer Action" sequence="1" value="customer action"/>
+                <element inactive_on_update="false" label="Need Info" sequence="2" value="need info"/>
+                <element inactive_on_update="false" label="Hardware Requested" sequence="3" value="hardware requested"/>
+            </choice>
+        </element>
+    </element>
+</database>
